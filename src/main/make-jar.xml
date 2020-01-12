@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project SHEF2 with Jar-in-Jar Loader">
+    <target name="create_run_jar" description="Build a runnable jar file">
+        <jar destfile="shef2.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="net.atlanticbb.tantlinger.shef.Shef2"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ jtidy.jar novaworx-syntax-0.0.7.jar commons-codec-1.11.jar xml-apis-ext-1.3.04.jar xmlgraphics-commons-2.3.jar batik-anim-1.11.jar batik-awt-util-1.11.jar batik-bridge-1.11.jar batik-ext-1.11.jar batik-gvt-1.11.jar batik-parser-1.11.jar batik-util-1.11.jar batik-transcoder-1.11.jar batik-svg-dom-1.11.jar batik-dom-1.11.jar batik-i18n-1.11.jar batik-css-1.11.jar batik-constants-1.11.jar batik-xml-1.11.jar batik-script-1.11.jar"/>
+                <attribute name="Implementation-Title" value="SHEF2" />
+                <attribute name="Implementation-Version" value="0.9.0" />
+                <attribute name="Implementation-Vendor" value="Optima SC Inc." />
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="bin"/>
+            <zipfileset dir="lib" includes="jtidy.jar"/>
+            <zipfileset dir="lib" includes="novaworx-syntax-0.0.7.jar"/>
+            <zipfileset dir="lib" includes="commons-codec-1.11.jar"/>
+            <zipfileset dir="lib" includes="xml-apis-ext-1.3.04.jar"/>
+            <zipfileset dir="lib" includes="xmlgraphics-commons-2.3.jar"/>
+            <zipfileset dir="lib" includes="batik-anim-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-awt-util-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-bridge-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-ext-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-gvt-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-parser-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-util-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-transcoder-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-svg-dom-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-dom-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-i18n-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-css-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-constants-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-xml-1.11.jar"/>
+            <zipfileset dir="lib" includes="batik-script-1.11.jar"/>
+        </jar>
+    </target>
+</project>
