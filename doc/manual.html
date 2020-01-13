@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">  <head>      <title>XHTML 
+    Editor usage guide</title>
+
+<meta name="author" content="Carl Eric Codère"></meta>
+<meta name="generator" content=" Shef2 0.0.0"></meta>
+</head>
+  <body><!-- This we need to check further later !-->
+
+  <h1>XHTML Editor usage guide
+</h1>
+  <h2>Introduction
+</h2>
+  <p>The XHTML Editor is a simple editor based on SHEF that can be used to 
+edit a subset of XHTML 1.0 Strict documents. It permits to edit both the 
+source code and visually the document, as well as exporting the documents to 
+different formats.
+</p>
+  <h2>XHTML Support
+</h2>
+  <h3>Introduction
+</h3>
+  <p>It currently officially supports editing the following XHTML Modules, as 
+defined in XHTML 1.1 Modularization:
+</p>
+  <ul>  <li>Structure module
+</li>
+  <li>Text Module
+</li>
+  <li>Hypertext Module
+</li>
+  <li>List Module
+</li>
+  <li>Presentation Module
+</li>
+  <li>List Module
+</li>
+  <li>Presentation Module
+</li>
+  <li>Basic Tables Module
+</li>
+  <li>Image Module
+</li>
+  <li>Style Sheet Module
+</li>
+  <li>Style Attribute Module
+</li>
+  <li>Metainformation Module
+</li>
+</ul>
+  <h3>Specific module notes
+</h3>
+  <p>The Image Module has some specificities, it currently contains the 
+following features and limitations:
+</p>
+  <ul>  <li>The editor only supports adding PNG images (MIME Type 
+&quot;image/png&quot;) and SVG vector images (MIME Type &quot;image/svg+xml) 
+for better portability
+</li>
+  <li>Embedded images in the document is supported following the DATA URI 
+scheme, as defined in IETF RFC 2397. For portability reasons, it limits the 
+size of the embedded data to base64 64 KiB.
+</li>
+  <li>Local images in the same location as the document are supported only 
+once the document is first saved or when the document is opened, as the Base 
+URL is created only when the current directory of the document is known.The 
+actual filename of the image needs to be set in URL field of the Image 
+Properties dialog box.The title, if found embedded in the PNG text chunk is 
+automatically added to the title and alt attributes.
+</li>
+</ul>
+  <h2>Exporting
+</h2>
+  <p>Such as in other minimalistic typesetting systems, the document must be 
+associated with a document class, which indicates how it will be exported. The 
+document class is specified when exporting the document. The following 
+document classes and their attributes are currently supported:
+</p>
+  <p>
+</p>
+  <table border="1" width="80%">  <tr>  <th rowspan="1" colspan="1">Document 
+class
+</th>
+  <th rowspan="1" colspan="1">Table of contents
+</th>
+  <th rowspan="1" colspan="1">Title page
+</th>
+  <th rowspan="1" colspan="1">Heading numbering
+</th>
+</tr>  <tr>  <td rowspan="1" colspan="1">article
+</td>
+  <td rowspan="1" colspan="1">NO
+</td>
+  <td rowspan="1" colspan="1">NO
+</td>
+  <td rowspan="1" colspan="1">NO
+</td>
+</tr>  <tr>  <td rowspan="1" colspan="1">report
+</td>
+  <td rowspan="1" colspan="1">YES
+</td>
+  <td rowspan="1" colspan="1">YES
+</td>
+  <td rowspan="1" colspan="1">YES
+</td>
+</tr>  <tr>  <td rowspan="1" colspan="1">book
+</td>
+  <td rowspan="1" colspan="1">YES
+</td>
+  <td rowspan="1" colspan="1">YES
+</td>
+  <td rowspan="1" colspan="1">NO
+</td>
+</tr>  <tr>  <td rowspan="1" colspan="1">letter
+</td>
+  <td rowspan="1" colspan="1">NO
+</td>
+  <td rowspan="1" colspan="1">NO
+</td>
+  <td rowspan="1" colspan="1">YES
+</td>
+</tr></table>  <h2>Document properties
+</h2>
+  <p>The following document properties are supported and will be mapped 
+accordingly to their HTML equivalence
+</p>
+  <ul>  <li><code>title</code> as defined in the title element. 
+</li>
+  <li><code>creator</code> (author) representing the creator / authors of the 
+document. 
+</li>
+  <li><code>description (description)</code>, a free form string that 
+describes the document. 
+</li>
+  <li><code>subject</code> (keywords) as a set of comma separated list of 
+tokens representing keywords associated with the page. 
+</li>
+</ul>
+  <h2>Frequently asked questions
+</h2>
+  <ul>  <li>How do i add a local anchor/bookmark in the page? You simply use 
+the Object Properties dialog box and set a name for the bookmark. You can then 
+a link to that bookmark, precedeed by the # character
+</li>
+  <li>
+</li>
+</ul>
+  <p></p>
+</body>
+</html>
